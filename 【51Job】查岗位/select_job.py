@@ -42,7 +42,7 @@ class GetJob(object):
             with open('job.csv', 'a', encoding='gb18030') as f:
                 job_list = [job_name, date_time, money, job_href, '\n']
                 f.write(','.join(job_list))
-
+      job_name = a.xpath("text()")[0].strip()
 
 if __name__ == "__main__":
     key = input("请输入关键词")
